@@ -25,13 +25,24 @@ def predict_next_word(model,tokenizer,text,max_seq_len):
             return word
     return None
 
+st.set_page_config(
+    page_title="Next Word Prediction", page_icon="🪄", layout="wide"
+)
 
-st.title('Next Word Prediction with LSTM')
+st.title('🪄 Next Word Prediction with LSTM')
 
-input_text = st.text_input('Enter the sequence of words','To be or not to be')
+input_text = st.text_input('Enter the sequence of words')
 
 if st.button('Predict next word'):
     max_seq_len = model.input_shape[1]+1
     next_word = predict_next_word(model,tokenizer,input_text,max_seq_len)
 
     st.write(f'Predicted word: {next_word}')
+
+st.write('| Note:')
+st.write('This model is trained with the shakespeare dataset.So, it will predict words from the shakespeare dataset.')
+
+st.markdown("---")
+
+st.subheader('| Github:')
+st.write('If you want some ideas regarding what text to enter, check out my github repo which has a text file of the shakespeare dataset.')
