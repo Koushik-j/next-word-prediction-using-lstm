@@ -17,8 +17,8 @@ This project aims to develop a deep learning model for predicting the next word 
 
 6- Deployment: A Streamlit web application is developed to allow users to input a sequence of words and get the predicted next word in real-time.
 
-## Required tools and liraries 
-1. Python
+## Required tools and libraries 
+1. Python 
 2. Pandas
 3. Numpy
 4. Scikit-learn
